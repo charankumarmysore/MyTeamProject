@@ -1,0 +1,16 @@
+<body id="login">
+<div class="login-logo"> </div>
+    <h2 class="form-heading">Sign in to Cin-Cin</h2>
+    <div class="app-cam">
+	        <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && (userForm.username.$dirty || submitted)}">
+		   <input type="text" class="text" name="username" ng-pattern="/^[a-zA-Z]+$/" placeholder="Username" ng-model="user.username" ng-required="true" maxlength="64" >
+	        </div>	
+			<div class="form-group" ng-class="{ 'has-error' : userForm.password.$invalid && (userForm.password.$dirty || submitted)}">            
+			<input type="password" name="Password" placeholder="password" required maxlength="128" ng-model="user.password"  ng-required="true" ng-pattern="/^[a-zA-Z]+$/">		
+            </div>
+		<p class="text-center" style="margin-bottom: 30px;">
+       <button class="btn btn-success btn-block"
+        ng-click="gotoDashBoard()" >Sign in</button>
+      </p>
+		</div>
+    </body>
